@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Add From</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+        <link href="./css/signin.css" rel="stylesheet">
+        <link href="./css/bootstrap.min.css" rel="stylesheet">
+        <link href="./css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+        <link rel="icon" href="./images/favicon.ico">
+        <style>
+            .divroute {
+                text-align: center
+            }
+        </style>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head>
+
+<body class="container">
+    <form id="add-form">
+        <div class="form-group">
+            <label for="title">Titre du livre</label>
+            <input v-model="title" type="text" class="form-control" id="title" placeholder="Titre">
+        </div>
+        <div class="form-group">
+            <label for="auteur">Auteur</label>
+            <input v-model="author" type="text" class="form-control" id="author" placeholder="Auteur">
+        </div>
+        <div class="form-group">
+            <label for="book-image">Image</label>
+            <input v-on:change="updateImagePath" type="file" id="book-image">
+        </div>
+        <div class="checkbox">
+            <label>
+        <input type="checkbox"> Check me out
+        </label>
+        </div>
+        <button type="submit" class="btn btn-default">Valider</button>
+    </form>
+</body>
+<script src="./addForm.js"></script>
+
+</html>

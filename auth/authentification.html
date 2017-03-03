@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Authentication Project with router</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+        <link href="./css/signin.css" rel="stylesheet">
+        <link href="./css/bootstrap.min.css" rel="stylesheet">
+        <link href="./css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+        <link rel="icon" href="./images/favicon.ico">
+        <style>
+            .divroute {
+                text-align: center
+            }
+        </style>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head>
+
+<body>
+    <div id="testAuthBootstrap"  class="container">
+        <form class="form-signin">
+            <h2 class="form-signin-heading">Please sign in</h2>
+            <label for="inputEmail" class="sr-only">Email address</label>
+            <input v-model="login" type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input v-model="pwd" type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+            <label for="confirmPassword" class="sr-only">Password</label>
+            <input v-model="confpwd" type="password" id="confirmPassword" class="form-control" placeholder="Confirm Password" required="">
+            <button v-on:click="authenticate" class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+            <auth-message v-bind:my-authentication-message="login" v-bind:my-authentication-message-password="pwd"></auth-message>
+        </form>
+        <div class="divroute">
+            <router-link to="/foo">Go to Foo</router-link>
+        </div>
+        <div class="divroute">
+            <router-link to="/bar">Go to Bar</router-link>
+        </div>
+    </div>
+</body>
+<script src="./auth.js"></script>
+
+</html>
